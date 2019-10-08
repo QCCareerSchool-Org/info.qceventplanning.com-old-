@@ -44,3 +44,15 @@ ul.sm-indent, ol.sm-indent { padding-inline-start: 0rem; padding-left: 1.5rem; }
 
 .btn.caps { text-transform: uppercase; letter-spacing: 1px }
 .btn.btn-lg.caps { letter-spacing: 2px }
+
+#brand {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+#brand-bar {
+  box-shadow: rgba(0,0,0,.8) 0 0 12px 0;
+  padding: 16px 0;
+}
