@@ -10,6 +10,7 @@
     "interface-name": false,
     "linebreak-style": [true, "LF"],
     "max-line-length": [true, 360],
+    "no-submodule-imports": [true, "react-icons", "react-bootstrap"],
     "object-literal-sort-keys": false,
     "quotemark": [true, "single", "jsx-double"],
     "space-within-parens": [true, "never"],
