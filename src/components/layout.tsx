@@ -34,7 +34,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
       <Helmet
         script={[
           { src: withPrefix('activecampaign.js'), async: true },
-          { src: withPrefix('perfect-audience.js'), async: true },
+          { src: withPrefix('adroll.js'), async: true },
           { src: withPrefix('livechat.js'), async: true },
         ]}
       />
