@@ -19,7 +19,7 @@ import { HowTheCoursesWork } from '../components/how-the-courses-work';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 
-const BecomeAnEventPlannerEbook: React.FC = () => {
+const BecomeAWeddingPlannerEbook: React.FC = () => {
   const images = useStaticQuery(graphql`
     query {
       sian: file(relativePath: { eq: "sian-gerryts.png" }) {
@@ -52,7 +52,7 @@ const BecomeAnEventPlannerEbook: React.FC = () => {
       <Background image="weddingTable">
         <section>
           <Container id="catalog-form">
-            <h1 style={{ textTransform: 'uppercase' }} className="text-center text-white text-shadow mb-4">Become a<br /><strong>Professional Event Planner</strong><br />with Online Training</h1>
+            <h1 style={{ textTransform: 'uppercase' }} className="text-center text-white text-shadow mb-4">Become a<br /><strong>Professional Wedding Planner</strong><br />with Online Training</h1>
             <Row>
               <Col xs="12" md="8" lg="6" className="offset-md-2 offset-lg-3">
                 <Card>
@@ -73,9 +73,9 @@ const BecomeAnEventPlannerEbook: React.FC = () => {
         <Container>
           <div className="d-flex justify-content-center">
             <ul>
-              <li>Find out if a career in event planning is right for you</li>
+              <li>Find out if a career in wedding planning is right for you</li>
               <li>Learn the top skills you'll need to be a successful planner</li>
-              <li>Discover why you'll want to consider an event planning career</li>
+              <li>Discover why you'll want to consider an wedding planning career</li>
               <li>Find out the top mistakes to avoid when starting your career</li>
               <li>Learn more about QC's Professional Certification Programs</li>
               <li>Discover how QC Event School can help you reach your goals through interactive online training!</li>
@@ -128,11 +128,11 @@ const BecomeAnEventPlannerEbook: React.FC = () => {
         </Container>
       </section>
 
-      <HowTheCoursesWork />
+      <HowTheCoursesWork title="Certified Wedding Planner" certification="wedding planning certification" />
 
-      <FirstStep />
+      <FirstStep title="a wedding planner" />
     </Layout>
   );
 };
 
-export default BecomeAnEventPlannerEbook;
+export default BecomeAWeddingPlannerEbook;
