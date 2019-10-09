@@ -44,7 +44,7 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
           name="field[3][]"
           value="I agree to receive additional emails from QC, including promotions, course launches, special offers and more. Unsubscribe anytime!"
         />
-        <label className="form-check-label small" htmlFor="opt-in">
+        <label className="form-check-label small" htmlFor="opt-in" style={{ fontWeight: 400 }}>
           I agree to receive additional emails from QC, including promotions, course launches,
           special offers and more. Unsubscribe anytime!
         </label>
