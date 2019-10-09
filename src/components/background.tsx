@@ -13,7 +13,7 @@ export const Background: React.FC<Props> = ({ children, style, className, image 
   <StaticQuery
     query={graphql`
       query {
-        weddingTable: file(relativePath: { eq: "backgrounds/wedding-table.webp" }) {
+        weddingTable: file(relativePath: { eq: "backgrounds/wedding-table.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
