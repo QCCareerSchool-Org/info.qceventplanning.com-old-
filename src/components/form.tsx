@@ -52,8 +52,7 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
       {recaptcha
         ? (
           <div className="form-group">
-            {/* <Helmet script={[ { src: 'https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit', async: true, defer: true } ]} /> */}
-            <Reaptcha sitekey={recaptcha} onVerify={() => { setDisabled(false); }} />
+            <Reaptcha sitekey={recaptcha} onExpire={() => { setDisabled(true); }} onVerify={() => { setDisabled(false); }} />
           </div>
         ) : null
       }
