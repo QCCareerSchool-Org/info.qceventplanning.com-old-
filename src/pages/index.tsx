@@ -19,7 +19,7 @@ export default () => (
               <Card>
                 <Card.Body className="p-4">
                   <Card.Title>Get Started with a <strong>Free</strong> Course Catalog</Card.Title>
-                  <Form />
+                  <Form recaptcha="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go" />
                 </Card.Body>
               </Card>
             </Col>
