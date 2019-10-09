@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import { Helmet } from 'react-helmet';
 
 import { LocationStateContext } from '../providers/location';
+import { Header } from './header';
 import './layout.scss';
 
 interface Props {
@@ -37,13 +38,16 @@ export const Layout: React.FC<Props> = ({ children }) => {
           { src: withPrefix('livechat.js'), async: true },
         ]}
       />
+      <Header telephoneNumber={telephoneNumber} />
       <main>{children}</main>
-      <footer className="bg-black text-white text-center" style={{ padding: '3rem 0 6rem' }}>
-        <Container>
-          <h2>Have questions? Give us a call.</h2>
+      <footer className="text-center" style={{ background: '#ededed' }}>
+        <section>
+        <Container className="mb-5">
+          <h2><strong>Have questions?<br />Give us a call.</strong></h2>
           <p className="h3 mb-4"><a href={'tel:' + telephoneNumber}>{telephoneNumber}</a></p>
           <p>© {new Date().getFullYear()} QC Event School<br /><a href="https://www.qceventplanning.com/terms.html">Privacy Policy</a></p>
         </Container>
+        </section>
       </footer>
     </>
   );

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import Reaptcha from 'reaptcha';
 
 interface Props {
   formId?: number;
   buttonText?: string;
+  recaptcha?: string;
 }
 
-export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalog' }) => {
+export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalog', recaptcha }) => {
+  const [ disabled, setDisabled ] = useState<boolean>(!!recaptcha);
+
   const seconds = Math.floor(new Date().getTime() / 1000);
   const rand = Math.floor(Math.random() * 1048576);
   const unique = seconds.toString(16).toUpperCase() + rand.toString(16).toUpperCase();
@@ -39,12 +44,19 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
           name="field[3][]"
           value="I agree to receive additional emails from QC, including promotions, course launches, special offers and more. Unsubscribe anytime!"
         />
-        <label className="form-check-label small" htmlFor="opt-in">
+        <label className="form-check-label small" htmlFor="opt-in" style={{ fontWeight: 400 }}>
           I agree to receive additional emails from QC, including promotions, course launches,
           special offers and more. Unsubscribe anytime!
         </label>
       </div>
-      <button className="btn btn-primary caps" type="submit">{buttonText}</button>
+      {recaptcha
+        ? (
+          <div className="form-group">
+            <Reaptcha sitekey={recaptcha} onExpire={() => { setDisabled(true); }} onVerify={() => { setDisabled(false); }} />
+          </div>
+        ) : null
+      }
+      <button className="btn btn-primary caps" type="submit" disabled={disabled}>{buttonText}</button>
     </form>
   );
 };
