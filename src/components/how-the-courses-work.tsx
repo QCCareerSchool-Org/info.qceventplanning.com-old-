@@ -7,7 +7,12 @@ import Certificate from '../images/certificate.svg';
 import Computer from '../images/computer.svg';
 import CourseBooks from '../images/course-books.svg';
 
-export const HowTheCoursesWork: React.FC = () => (
+interface Props {
+  title?: string;
+  certification?: string;
+}
+
+export const HowTheCoursesWork: React.FC<Props> = ({ title = 'Certified Event Planner', certification = 'event planning certification' }) => (
   <section className="text-center">
     <Container>
       <h2>How the Courses Work</h2>
@@ -24,8 +29,8 @@ export const HowTheCoursesWork: React.FC = () => (
         </Col>
         <Col xs="12" lg="4">
           <img src={Certificate} />
-          <h3 className="h5">Graduate from QC &amp; Become a Certified Event Planner</h3>
-          <p>Once you complete your assignments and have graduated from your course, you'll receive your event planning certification! You'll have lifetime access to course materials, as well as a 50% off enrollment discount for all additional courses.</p>
+          <h3 className="h5">Graduate from QC &amp; Become a {title}</h3>
+          <p>Once you complete your assignments and have graduated from your course, you'll receive your {certification}! You'll have lifetime access to course materials, as well as a 50% off enrollment discount for all additional courses.</p>
         </Col>
       </Row>
     </Container>
