@@ -25,7 +25,7 @@ export const Testimonials: React.FC<Props> = ({ data }) => (
   <Container>
     <Row className="no-gutters">
       <Col xs="12" md="10" className="offset-md-1">
-        <Slider className="d-flex align-items-center" dots={true} prevArrow={<TestimonialArrowPrev />} nextArrow={<TestimonialArrowNext />}>
+        <Slider className="d-flex align-items-center" dots={true} fade={true} prevArrow={<TestimonialArrowPrev />} nextArrow={<TestimonialArrowNext />}>
           {data.map((d, i) => (
             <div key={i}>
               <p className="testimonial-excerpt">{d.excerpt}</p>
