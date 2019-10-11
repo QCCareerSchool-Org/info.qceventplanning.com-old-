@@ -31,29 +31,29 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Open Sans`,
-    //         variants: [ `300`, `300i`, `400`, `400i`, `700`, `700i` ],
-    //       },
-    //       {
-    //         family: `Playfair Display`,
-    //         variants: [ `400`, `700` ],
-    //       },
-    //     ],
-    //   },
-    // },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: [ 'Open Sans', 'Playfair Display' ],
-        },
+        fonts: [
+          {
+            family: `Open Sans`,
+            variants: [ `300`, `300i`, `400`, `400i`, `700`, `700i` ],
+          },
+          {
+            family: `Playfair Display`,
+            variants: [ `400`, `700` ],
+          },
+        ],
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: [ 'Open Sans', 'Playfair Display' ],
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
