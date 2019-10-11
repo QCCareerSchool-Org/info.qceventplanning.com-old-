@@ -6,15 +6,16 @@ import Row from 'react-bootstrap/Row';
 
 import { Accreditation } from '../components/accreditation';
 import { Background } from '../components/background';
+import { Certification } from '../components/certification';
 import { Form } from '../components/form';
 import { GetStarted } from '../components/get-started';
 import { HowTheCoursesWork } from '../components/how-the-courses-work';
+import { HowYouLearn } from '../components/how-you-learn';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
+import { Testimonials } from '../components/testimonials';
 import { ScreenWidthContext } from '../providers/screen-width';
 
-import { HowYouLearn } from '../components/how-you-learn';
-import { Testimonials } from '../components/testimonials';
 import Arrow from '../images/arrow.svg';
 
 const FreeEventCourseCatalog: React.FC = () => {
@@ -78,6 +79,8 @@ const FreeEventCourseCatalog: React.FC = () => {
       />
 
       <HowYouLearn />
+
+      <Certification />
 
       <Accreditation />
 
