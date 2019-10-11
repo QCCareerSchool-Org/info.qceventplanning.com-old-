@@ -51,7 +51,7 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
       </div>
       {recaptcha
         ? (
-          <div className="form-group">
+          <div className="form-group" style={{ minHeight: 78 }}>
             <Reaptcha sitekey={recaptcha} onExpire={() => { setDisabled(true); }} onVerify={() => { setDisabled(false); }} />
           </div>
         ) : null
