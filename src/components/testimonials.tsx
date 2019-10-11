@@ -4,6 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Slider from 'react-slick';
 
+/* tslint:disable:no-submodule-imports */
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+
 import { TestimonialArrowNext } from './testimonial-arrow-next';
 import { TestimonialArrowPrev } from './testimonial-arrow-prev';
 
@@ -21,7 +25,7 @@ export const Testimonials: React.FC<Props> = ({ data }) => (
   <Container>
     <Row className="no-gutters">
       <Col xs="12" md="10" className="offset-md-1">
-        <Slider dots={true} adaptiveHeight={true} prevArrow={<TestimonialArrowPrev />} nextArrow={<TestimonialArrowNext />}>
+        <Slider className="d-flex align-items-center" dots={true} prevArrow={<TestimonialArrowPrev />} nextArrow={<TestimonialArrowNext />}>
           {data.map((d, i) => (
             <div key={i}>
               <p className="testimonial-excerpt">{d.excerpt}</p>

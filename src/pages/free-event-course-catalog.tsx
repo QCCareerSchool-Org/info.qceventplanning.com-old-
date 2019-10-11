@@ -3,11 +3,6 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Slider from 'react-slick';
-
-/* tslint:disable:no-submodule-imports */
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
 
 import { Accreditation } from '../components/accreditation';
 import { Background } from '../components/background';
@@ -16,8 +11,6 @@ import { GetStarted } from '../components/get-started';
 import { HowTheCoursesWork } from '../components/how-the-courses-work';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
-import { TestimonialArrowNext } from '../components/testimonial-arrow-next';
-import { TestimonialArrowPrev } from '../components/testimonial-arrow-prev';
 import { ScreenWidthContext } from '../providers/screen-width';
 
 import { HowYouLearn } from '../components/how-you-learn';
