@@ -10,7 +10,11 @@ import FeedbackIcon from '../images/feedback-icon.svg';
 import FlexibleIcon from '../images/flexible-icon.svg';
 import LifetimeIcon from '../images/lifetime-icon.svg';
 
-export const HowTheCoursesWork: React.FC = () => (
+interface Props {
+  events?: string;
+}
+
+export const HowTheCoursesWork: React.FC<Props> = ({ events }) => (
   <section className="bg-light">
     <Container className="text-center">
       <h2>Join QC Event School</h2>
@@ -24,7 +28,7 @@ export const HowTheCoursesWork: React.FC = () => (
         <Col xs="12" lg="4" className="mb-5 mb-lg-0">
           <p><img className="img-fluid" width="75" height="75" src={CostsIcon} alt="No high tuition cost" /></p>
           <h3>Learn the fundamentals</h3>
-          <p>Practical knowledge for budgeting, coordinating, and executing a variety of events.</p>
+          <p>Practical knowledge for budgeting, coordinating, and executing a variety of {events} events.</p>
         </Col>
         <Col xs="12" lg="4" className="mb-5 mb-lg-0">
           <p><img className="img-fluid" width="75" height="75" src={BusinessIcon} alt="Business training" /></p>
