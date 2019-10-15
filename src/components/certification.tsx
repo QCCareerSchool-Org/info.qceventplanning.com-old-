@@ -11,7 +11,7 @@ interface Props {
   cert?: 'event' | 'wedding' | 'party';
 }
 
-export const Certification: React.FC<Props> = ({ cert = 'iddp' }) => {
+export const Certification: React.FC<Props> = ({ cert = 'event' }) => {
   const images = useStaticQuery(graphql`
     query {
       iewp: file(relativePath: { eq: "certification-image-iewp.png" }) {
