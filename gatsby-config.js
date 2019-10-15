@@ -46,14 +46,6 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     google: {
-    //       families: [ 'Open Sans', 'Playfair Display' ],
-    //     },
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -63,6 +55,7 @@ module.exports = {
         ],
         gtagConfig: {
           site_speed_sample_rate: 100,
+          optimize_id: 'GTM-MK3SKDL',
         },
       },
     },
