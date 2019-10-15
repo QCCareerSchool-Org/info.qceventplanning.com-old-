@@ -26,7 +26,7 @@ export const HowYouLearn: React.FC<Props> = ({
       <Row className="mb-5">
         <Col lg="10" className="offset-lg-1">
           <div className="embed-responsive embed-responsive-16by9 shadow-lg">
-            <iframe className="embed-responsive-item" width={690} height={402} src="https://www.youtube.com/embed/ML-Pd4JIZ58" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} />
+            <iframe className="embed-responsive-item" width={690} height={402} src="https://www.youtube.com/embed/ML-Pd4JIZ58?rel=0" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} />
           </div>
         </Col>
       </Row>
