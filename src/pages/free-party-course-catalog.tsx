@@ -34,13 +34,13 @@ const FreePartyCourseCatalog: React.FC = () => {
             <Row className="align-items-center">
               <Col xs="12" lg="6" className="order-1 order-lg-2 text-center text-lg-left">
                 <h1 style={{ textTransform: 'uppercase' }} className="text-white text-shadow mb-4"><small>Get the Free</small><br />Party Planning Course Catalog</h1>
-                {desktop ? <img src={Arrow} width={300} alt="" /> : null}
+                {desktop ? <img src={Arrow} width={300} alt="" style={{ marginBottom: '8rem' }} /> : null}
               </Col>
               <Col xs="12" md="8" lg="6" className="offset-md-2 offset-lg-0 order-2 order-lg-1">
                 <Card>
                   <Card.Body>
                     <div className="p-0 p-md-4">
-                      <Card.Title className="text-center mb-4">Download the Free Course Catalog</Card.Title>
+                      <Card.Title className="mb-4 text-black">Download the Free Course Catalog</Card.Title>
                       <Form recaptcha="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go" />
                     </div>
                   </Card.Body>
