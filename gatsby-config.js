@@ -37,11 +37,23 @@ module.exports = {
         fonts: [
           {
             family: `Open Sans`,
-            variants: [ `300`, `500`, `600`, `700` ],
+            variants: [ `300`, `300i`, `400`, `400i`, `700`, `700i` ],
+          },
+          {
+            family: `Playfair Display`,
+            variants: [ `400`, `700` ],
           },
         ],
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: [ 'Open Sans', 'Playfair Display' ],
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
