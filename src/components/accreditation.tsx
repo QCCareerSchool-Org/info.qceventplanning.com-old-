@@ -10,14 +10,14 @@ export const Accreditation: React.FC = () => {
     query {
       bbb: file(relativePath: { eq: "bbb-logo.png" }) {
         childImageSharp {
-          fixed(quality: 90, width: 155) {
+          fixed(quality: 90, width: 116) {
             ...GatsbyImageSharpFixed_tracedSVG
           }
         }
       },
       ilea: file(relativePath: { eq: "ilea-logo.png" }) {
         childImageSharp {
-          fixed(quality: 90, width: 155) {
+          fixed(quality: 90, width: 116) {
             ...GatsbyImageSharpFixed_tracedSVG
           }
         }
@@ -26,22 +26,23 @@ export const Accreditation: React.FC = () => {
   `);
 
   return (
-    <section>
+    <section className="text-center">
       <Container>
-        <Row className="text-center">
-          <Col className="col-12 col-md-6">
-            <a target="_blank" href="https://www.bbb.org/ca/on/ottawa/profile/correspondence-schools/qc-career-school-0117-4175#sealclick"><Img fixed={images.bbb.childImageSharp.fixed} alt="BBB" /></a>
-            <h2 className="h4">BBB Accreditation</h2>
+        <h2>Accreditation</h2>
+        <Row>
+          <Col xs="12" md="6" className="mb-4 mb-md-0">
+            <a target="_blank" href="https://www.ileahub.com/Education/ILEA-Approved"><Img fixed={images.ilea.childImageSharp.fixed} alt="ILEA" className="mb-2" /></a>
+            <h2 className="h4 text-dark">ILEA Approval</h2>
             <div className="mx-auto" style={{ maxWidth: 360 }}>
-              <p>QC Event School is accredited by the Better Business Bureau, holding the highest possible consumer satisfaction rating (A+).</p>
-              <p><a target="_blank" href="https://www.bbb.org/ca/on/ottawa/profile/correspondence-schools/qc-career-school-0117-4175#sealclick">BBB Reviews</a></p>
+              <p>Every professional certification course QC offers is approved by the International Live Events Association. QC’s courses meet the rigorous standards for approval set by this industry-leading association.</p>
             </div>
           </Col>
-          <Col className="col-12 col-md-6">
-            <a target="_blank" href="https://www.ileahub.com/Education/ILEA-Approved"><Img fixed={images.ilea.childImageSharp.fixed} alt="ILEA" /></a>
-            <h2 className="h4">ILEA Approval</h2>
+          <Col xs="12" md="6">
+            <a target="_blank" href="https://www.bbb.org/ca/on/ottawa/profile/correspondence-schools/qc-career-school-0117-4175#sealclick"><Img fixed={images.bbb.childImageSharp.fixed} alt="BBB" className="mb-2" /></a>
+            <h2 className="h4 text-dark">BBB Accreditation</h2>
             <div className="mx-auto" style={{ maxWidth: 360 }}>
-              <p>Every professional certification course QC offers is approved by the International Live Events Association. QC's courses meet the rigorous standards for approval and offer students high-quality training in event planning.</p>
+              <p>QC Event School is fully accredited by the Better Business Bureau, holding the highest possible consumer satisfaction rating (A+).</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/ca/on/ottawa/profile/correspondence-schools/qc-career-school-0117-4175#sealclick">BBB Reviews</a></p>
             </div>
           </Col>
         </Row>

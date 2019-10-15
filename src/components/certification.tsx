@@ -16,7 +16,7 @@ export const Certification: React.FC<Props> = ({ cert = 'iddp' }) => {
     query {
       iddp: file(relativePath: { eq: "certification-image-iddp.png" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 460) {
+          fluid(quality: 90, maxWidth: 518) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -24,14 +24,14 @@ export const Certification: React.FC<Props> = ({ cert = 'iddp' }) => {
     }
   `);
   return (
-    <Background image="weddingTableCloseup">
+    <Background image="weddingTableCloseup" style={{ backgroundPosition: '0% 0%' }}>
     <section className="text-light">
       <Container>
-        <Row>
-          <Col xs="12">
+        <Row className="align-items-center">
+          <Col xs="12" md="10" lg="4" className="offset-md-1 mb-4 mb-lg-0">
             <Img fluid={images[cert].childImageSharp.fluid} alt={cert} />
           </Col>
-          <Col xs="12" md="10" lg="6" className="offset-md-1 col-lg-6">
+          <Col xs="12" md="10" lg="6" className="offset-md-1">
             <h2>Your Event Planning Certification</h2>
             <p>Once you’ve completed your event planning courses online, you’ll receive your certification and professional designation. Use these to market yourself as a certified event planner and sell your services to clients.</p>
             <p>This certification demonstrates that you have successfully completed professional event planner training and that you possess all the skills and knowledge required to plan, design, and execute flawless events.</p>

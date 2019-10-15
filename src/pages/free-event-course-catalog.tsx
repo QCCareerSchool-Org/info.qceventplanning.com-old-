@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
+import { About } from '../components/about';
 import { Accreditation } from '../components/accreditation';
 import { Background } from '../components/background';
 import { Certification } from '../components/certification';
@@ -11,6 +12,7 @@ import { Form } from '../components/form';
 import { GetStarted } from '../components/get-started';
 import { HowTheCoursesWork } from '../components/how-the-courses-work';
 import { HowYouLearn } from '../components/how-you-learn';
+import { Industry } from '../components/industry';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 import { Testimonials } from '../components/testimonials';
@@ -77,13 +79,11 @@ const FreeEventCourseCatalog: React.FC = () => {
           },
         ]}
       />
-
       <HowYouLearn />
-
       <Certification />
-
+      <Industry />
       <Accreditation />
-
+      <About />
       <GetStarted />
     </Layout>
   );

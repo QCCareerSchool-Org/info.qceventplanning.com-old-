@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const HowYouLearn: React.FC<Props> = ({ title = 'Certified Event Planner' }) => (
-  <section style={{ background: '#ededed' }}>
+  <section className="bg-light">
     <Container className="text-center">
       <h2 className="mb-4">How You Learn</h2>
       <Row>

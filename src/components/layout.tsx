@@ -42,11 +42,22 @@ export const Layout: React.FC<Props> = ({ children }) => {
       <main>{children}</main>
       <footer className="text-center" style={{ background: '#ededed' }}>
         <section>
-        <Container className="mb-5">
-          <h2><strong>Have questions?<br />Give us a call.</strong></h2>
-          <p className="h3 mb-4"><a href={'tel:' + telephoneNumber}>{telephoneNumber}</a></p>
-          <p>© {new Date().getFullYear()} QC Event School<br /><a href="https://www.qceventplanning.com/terms.html">Privacy Policy</a></p>
-        </Container>
+          <Container className="mb-5">
+            <h2 className="h3">Have questions? Give us a call.</h2>
+            <p className="h3 mb-4"><a href={'tel:' + telephoneNumber}>{telephoneNumber}</a></p>
+            <p>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.qceventplanning.com/online-event-courses/">Online Event Courses</a>
+              <span className="px-2">|</span>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.qceventplanning.com/tuition/">Tuition</a>
+              <span className="px-2">|</span>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.qceventplanning.com/about-qc/frequently-asked-questions/">FAQ</a>
+              <span className="px-2">|</span>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.qceventplanning.com/contact-us/">Contact Us</a>
+              <span className="px-2">|</span>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.qceventplanning.com/terms.html">Privacy Policy</a>
+            </p>
+            <p>© {new Date().getFullYear()} QC Event School</p>
+          </Container>
         </section>
       </footer>
     </>
