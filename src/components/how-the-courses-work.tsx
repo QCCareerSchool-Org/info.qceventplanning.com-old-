@@ -3,34 +3,52 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import Certificate from '../images/certificate.svg';
-import Computer from '../images/computer.svg';
-import CourseBooks from '../images/course-books.svg';
+import BusinessIcon from '../images/business-icon.svg';
+import CertificationIcon from '../images/certification-icon.svg';
+import CostsIcon from '../images/costs-icon.svg';
+import FeedbackIcon from '../images/feedback-icon.svg';
+import FlexibleIcon from '../images/flexible-icon.svg';
+import LifetimeIcon from '../images/lifetime-icon.svg';
 
 interface Props {
-  title?: string;
-  certification?: string;
+  events?: string;
 }
 
-export const HowTheCoursesWork: React.FC<Props> = ({ title = 'Certified Event Planner', certification = 'event planning certification' }) => (
-  <section className="text-center">
-    <Container>
-      <h2>How the Courses Work</h2>
+export const HowTheCoursesWork: React.FC<Props> = ({ events }) => (
+  <section className="bg-light">
+    <Container className="text-center">
+      <h2>Join QC Event School</h2>
+      <p className="lead mb-5">QC’s event &amp; wedding planning courses provide you with:</p>
       <Row>
-        <Col xs="12" lg="4">
-          <img src={CourseBooks} />
-          <h3 className="h5">Enroll Today &amp; Access Your Course Materials</h3>
-          <p>When you enroll, QC Event School will mail out your course materials so you can study with physical copies of your course books. You can also access your texts and videos through QC's Online Student Center.</p>
+        <Col xs="12" lg="4" className="mb-5 mb-lg-0">
+          <p><img className="img-fluid" width="75" height="75" src={FeedbackIcon} alt="1-on-1 feedback" /></p>
+          <h3>1-on-1 feedback</h3>
+          <p>Personalized 1-on-1 feedback from a tutor invested in your success.</p>
+        </Col>
+        <Col xs="12" lg="4" className="mb-5 mb-lg-0">
+          <p><img className="img-fluid" width="75" height="75" src={CostsIcon} alt="No high tuition cost" /></p>
+          <h3>Learn the fundamentals</h3>
+          <p>Practical knowledge for budgeting, coordinating, and executing a variety of {events} events.</p>
+        </Col>
+        <Col xs="12" lg="4" className="mb-5 mb-lg-0">
+          <p><img className="img-fluid" width="75" height="75" src={BusinessIcon} alt="Business training" /></p>
+          <h3>Real-world exercises</h3>
+          <p>Hands-on assignments based on real-world scenarios and clients personas.</p>
+        </Col>
+        <Col xs="12" lg="4" className="mb-5 mb-lg-0">
+          <p><img className="img-fluid" width="75" height="75" src={LifetimeIcon} alt="Lifetime access" /></p>
+          <h3>Lifetime access</h3>
+          <p>Lifetime access to up-to-date course materials and business templates.</p>
+        </Col>
+        <Col xs="12" lg="4" className="mb-5 mb-lg-0">
+          <p><img className="img-fluid" width="75" height="75" src={CertificationIcon} alt="Professional certification" /></p>
+          <h3>Professional certification</h3>
+          <p>A professional certification and designation upon graduation of your course.</p>
         </Col>
         <Col xs="12" lg="4">
-          <img src={Computer} />
-          <h3 className="h5">Submit Assignments &amp; Review Feedback</h3>
-          <p>Complete your assignments and upload them to the Online Student Center. Your tutor will review your work and provide you with a grade along with audio feedback. You'll review your tutor's advice to improve your skills for the next unit.</p>
-        </Col>
-        <Col xs="12" lg="4">
-          <img src={Certificate} />
-          <h3 className="h5">Graduate from QC &amp; Become a {title}</h3>
-          <p>Once you complete your assignments and have graduated from your course, you'll receive your {certification}! You'll have lifetime access to course materials, as well as a 50% off enrollment discount for all additional courses.</p>
+          <p><img className="img-fluid" width="75" height="75" src={FlexibleIcon} alt="Flexible payment options" /></p>
+          <h3>Flexible payment options</h3>
+          <p>Flexible tuition payment options. No hidden fees. No additional costs.</p>
         </Col>
       </Row>
     </Container>

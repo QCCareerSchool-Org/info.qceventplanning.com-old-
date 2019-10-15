@@ -13,7 +13,7 @@ adroll_pix_id = 'AAKTSZEP5NA3PNKFUT5BJB';
       return;
     }
     var script = document.createElement('script');
-    var host = (('https:' == document.location.protocol) ? 'https://s.adroll.com' : 'http://a.adroll.com');
+    var host = 'https:' === document.location.protocol ? 'https://s.adroll.com' : 'http://a.adroll.com';
     script.setAttribute('async', 'true');
     script.type = 'text/javascript';
     script.async = true;
