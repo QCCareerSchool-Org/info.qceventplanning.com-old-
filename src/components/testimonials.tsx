@@ -11,13 +11,15 @@ import 'slick-carousel/slick/slick.css';
 import { TestimonialArrowNext } from './testimonial-arrow-next';
 import { TestimonialArrowPrev } from './testimonial-arrow-prev';
 
+type Data = {
+  excerpt: string;
+  quote: string;
+  name: string;
+  title?: string;
+};
+
 interface Props {
-  data: Array<{
-    excerpt: string;
-    quote: string;
-    name: string;
-    title?: string;
-  }>;
+  data: Data[];
 }
 
 export const Testimonials: React.FC<Props> = ({ data }) => (
