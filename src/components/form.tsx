@@ -29,7 +29,7 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
       </div>
       <div className="form-group">
         <label htmlFor="lastName">Last Name</label>
-        <input className="form-control" id="firstName" name="lastname" />
+        <input className="form-control" id="lastName" name="lastname" />
       </div>
       <div className="form-group">
         <label htmlFor="emailAddress">Email <span className="text-primary">*</span></label>
