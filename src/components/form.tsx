@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalog', recaptcha }) => {
-  const [ disabled, setDisabled ] = useState<boolean>(!!recaptcha);
+  const [disabled, setDisabled] = useState<boolean>(!!recaptcha);
 
   const seconds = Math.floor(new Date().getTime() / 1000);
   const rand = Math.floor(Math.random() * 1048576);
@@ -35,6 +35,10 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
         <label htmlFor="emailAddress">Email <span className="text-primary">*</span></label>
         <input type="email" className="form-control" id="emailAddress" name="email" required={true} />
       </div>
+      <div className="form-group">
+        <label htmlFor="phone">Phone Number</label>
+        <input type="tel" className="form-control" id="phone" name="phone" />
+      </div>
       <input type="hidden" name="field[3][]" value="~|" />
       <div className="form-group form-check">
         <input
@@ -47,6 +51,18 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
         <label className="form-check-label small" htmlFor="opt-in" style={{ fontWeight: 400 }}>
           I agree to receive additional emails from QC, including promotions, course launches,
           special offers and more. Unsubscribe anytime!
+        </label>
+      </div>
+      <div className="form-group form-check">
+        <input
+          type="checkbox"
+          className="form-check-input"
+          id="phone-opt-in"
+          name="field[103][]"
+          value="I agree to receive phone calls from a QC student advisor."
+        />
+        <label className="form-check-label small" htmlFor="phone-opt-in" style={{ fontWeight: 400 }}>
+          I agree to receive phone calls from a QC student advisor.
         </label>
       </div>
       {recaptcha
