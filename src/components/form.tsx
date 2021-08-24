@@ -53,16 +53,17 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
           special offers and more. Unsubscribe anytime!
         </label>
       </div>
+      <input type="hidden" name="field[103][]" value="~|" />
       <div className="form-group form-check">
         <input
           type="checkbox"
           className="form-check-input"
           id="phone-opt-in"
           name="field[103][]"
-          value="I agree to receive phone calls from a QC student advisor."
+          value="I agree to receive phone calls and/or text messages from a QC student advisor. Standard rates apply."
         />
         <label className="form-check-label small" htmlFor="phone-opt-in" style={{ fontWeight: 400 }}>
-          I agree to receive phone calls from a QC student advisor.
+          I agree to receive phone calls and/or text messages from a QC student advisor. Standard rates apply.
         </label>
       </div>
       {recaptcha
