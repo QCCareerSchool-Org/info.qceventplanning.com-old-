@@ -35,10 +35,6 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
         <label htmlFor="emailAddress">Email <span className="text-primary">*</span></label>
         <input type="email" className="form-control" id="emailAddress" name="email" required={true} />
       </div>
-      <div className="form-group">
-        <label htmlFor="phone">Phone Number</label>
-        <input type="tel" className="form-control" id="phone" name="phone" />
-      </div>
       <input type="hidden" name="field[3][]" value="~|" />
       <div className="form-group form-check">
         <input
@@ -54,18 +50,6 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
         </label>
       </div>
       <input type="hidden" name="field[103][]" value="~|" />
-      <div className="form-group form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="phone-opt-in"
-          name="field[103][]"
-          value="I agree to receive phone calls and/or text messages from a QC student advisor. Standard rates apply."
-        />
-        <label className="form-check-label small" htmlFor="phone-opt-in" style={{ fontWeight: 400 }}>
-          I agree to receive phone calls and/or text messages from a QC student advisor. Standard rates apply.
-        </label>
-      </div>
       {recaptcha
         ? (
           <div className="form-group" style={{ minHeight: 78 }}>
