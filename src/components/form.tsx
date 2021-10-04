@@ -49,7 +49,6 @@ export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalo
           special offers and more. Unsubscribe anytime!
         </label>
       </div>
-      <input type="hidden" name="field[103][]" value="~|" />
       {recaptcha
         ? (
           <div className="form-group" style={{ minHeight: 78 }}>
