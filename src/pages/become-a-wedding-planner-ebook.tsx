@@ -20,9 +20,13 @@ import { ScreenWidthContext } from '../providers/screen-width';
 
 import Arrow from '../images/arrow.svg';
 
+import { useTestGroup } from '../hooks/useTestGroup';
+
 const BecomeAWeddingPlannerEbook: React.FC = () => {
   const screenWidth = useContext(ScreenWidthContext);
   const desktop = screenWidth >= 992;
+
+  const testGroup = useTestGroup();
 
   return (
     <Layout>
@@ -41,7 +45,7 @@ const BecomeAWeddingPlannerEbook: React.FC = () => {
                   <Card.Body>
                     <div className="p-0 p-md-4">
                       <Card.Title className="mb-4 text-black">Download the Free eBook</Card.Title>
-                      <Form recaptcha="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go" />
+                      <Form testGroup={testGroup} />
                     </div>
                   </Card.Body>
                 </Card>
@@ -61,5 +65,7 @@ const BecomeAWeddingPlannerEbook: React.FC = () => {
     </Layout>
   );
 };
+
+
 
 export default BecomeAWeddingPlannerEbook;

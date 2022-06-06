@@ -31,13 +31,11 @@ export const Layout: React.FC<Props> = ({ children }) => {
 
   return (
     <>
-      <Helmet
+      {/* <Helmet
         script={[
-          { src: withPrefix('activecampaign.js'), async: true },
           { src: withPrefix('adroll.js'), async: true },
-          { src: withPrefix('livechat.js'), async: true },
         ]}
-      />
+      /> */}
       <Header telephoneNumber={telephoneNumber} />
       <main>{children}</main>
       <footer className="text-center" style={{ background: '#ededed' }}>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
  *
@@ -24,3 +25,11 @@ export const wrapRootElement = ({ element }) => (
     </ScrollPositionProvider>
   </ScreenWidthProvider>
 );
+
+export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
+  setPostBodyComponents([
+    <script key="livechat" src="/livechat.js" async />,
+    <script key="pardot" src="/pardot.js" async />,
+    <script key="adroll" src="/adroll.js" async />,
+  ]);
+};

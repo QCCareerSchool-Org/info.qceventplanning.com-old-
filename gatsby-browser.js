@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
