@@ -1,62 +1,42 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
-import Reaptcha from 'reaptcha';
+import React, { useContext } from 'react';
+
+import { LocationStateContext } from '../providers/location';
 
 interface Props {
-  formId?: number;
+  action?: string;
   buttonText?: string;
-  recaptcha?: string;
+  testGroup: number;
 }
 
-export const Form: React.FC<Props> = ({ formId = 3, buttonText = 'Get the Catalog', recaptcha }) => {
-  const [disabled, setDisabled] = useState<boolean>(!!recaptcha);
+export const Form: React.FC<Props> = ({ action = 'https://go.qceventplanning.com/l/947642/2022-02-15/8n8h7', buttonText = 'Get the Catalog', testGroup }) => {
+  const location = useContext(LocationStateContext);
 
-  const seconds = Math.floor(new Date().getTime() / 1000);
-  const rand = Math.floor(Math.random() * 1048576);
-  const unique = seconds.toString(16).toUpperCase() + rand.toString(16).toUpperCase();
   return (
-    <form method="post" action="https://qccareerschool.activehosted.com/proc.php">
-      <input type="hidden" name="u" value={unique} />
-      <input type="hidden" name="f" value={formId} />
-      <input type="hidden" name="s" />
-      <input type="hidden" name="c" value="0" />
-      <input type="hidden" name="m" value="0" />
-      <input type="hidden" name="act" value="sub" />
-      <input type="hidden" name="v" value="2" />
+    <form method="post" action={action}>
+      <input type="hidden" name="school" value="QC Event School" />
+      <input type="hidden" name="testGroup" value={testGroup} />
+      <input type="hidden" name="countryCode" value={location.countryCode} />
+      {location.provinceCode && <input type="hidden" name="provinceCode" value={location.provinceCode} />}
       <div className="form-group">
         <label htmlFor="firstName">First Name</label>
-        <input className="form-control" id="firstName" name="firstname" />
+        <input className="form-control" id="firstName" name="firstName" />
       </div>
       <div className="form-group">
         <label htmlFor="lastName">Last Name</label>
-        <input className="form-control" id="lastName" name="lastname" />
+        <input className="form-control" id="lastName" name="lastName" />
       </div>
       <div className="form-group">
         <label htmlFor="emailAddress">Email <span className="text-primary">*</span></label>
-        <input type="email" className="form-control" id="emailAddress" name="email" required={true} />
+        <input type="email" className="form-control" id="emailAddress" name="emailAddress" required />
       </div>
-      <input type="hidden" name="field[3][]" value="~|" />
       <div className="form-group form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="opt-in"
-          name="field[3][]"
-          value="I agree to receive additional emails from QC, including promotions, course launches, special offers and more. Unsubscribe anytime!"
-        />
-        <label className="form-check-label small" htmlFor="opt-in" style={{ fontWeight: 400 }}>
+        <input type="checkbox" className="form-check-input" id="emailOptIn" name="emailOptIn" />
+        <label className="form-check-label small" htmlFor="emailOptIn" style={{ fontWeight: 400 }}>
           I agree to receive additional emails from QC, including promotions, course launches,
           special offers and more. Unsubscribe anytime!
         </label>
       </div>
-      {recaptcha
-        ? (
-          <div className="form-group" style={{ minHeight: 78 }}>
-            <Reaptcha sitekey={recaptcha} onExpire={() => { setDisabled(true); }} onVerify={() => { setDisabled(false); }} />
-          </div>
-        ) : null
-      }
-      <button className="btn btn-primary caps" type="submit" disabled={disabled}>{buttonText}</button>
+      <button className="btn btn-primary caps" type="submit">{buttonText}</button>
     </form>
   );
 };
