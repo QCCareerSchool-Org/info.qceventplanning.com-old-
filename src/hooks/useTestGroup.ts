@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const getStoredTestGroup = (): number | false => {
-  if (window.navigator.cookieEnabled && 'sessionStorage' in window) {
+  if (window?.navigator?.cookieEnabled && 'sessionStorage' in window) {
     const storedValue = window.sessionStorage.getItem('testGroup');
     if (storedValue !== null) {
       const parsedValue = parseInt(storedValue, 10);
@@ -14,7 +14,7 @@ const getStoredTestGroup = (): number | false => {
 };
 
 const storeTestGroup = (testGroup: number): void => {
-  if (window.navigator.cookieEnabled && 'sessionStorage' in window) {
+  if (window?.navigator?.cookieEnabled && 'sessionStorage' in window) {
     window.sessionStorage.setItem('testGroup', testGroup.toString());
   }
 };
