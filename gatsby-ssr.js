@@ -28,7 +28,7 @@ export const wrapRootElement = ({ element }) => (
 
 export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   setPostBodyComponents([
-    <script key="livechat" src="/livechat.js" async />,
+    // <script key="livechat" src="/livechat.js" async />,
     <script key="pardot" src="/pardot.js" async />,
     <script key="adroll" src="/adroll.js" async />,
   ]);
