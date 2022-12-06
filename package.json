@@ -2,7 +2,7 @@
   "name": "info-qceventplanning.com",
   "private": true,
   "description": "QC Event School landing pages",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
